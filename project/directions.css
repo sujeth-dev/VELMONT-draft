@@ -27,7 +27,7 @@
 /* ============================================================
    DIRECTION 01 — STUDIO JOURNAL
    ============================================================ */
-.dir-journal{background:var(--paper);color:var(--ink);--serif:'Cormorant Garamond',Georgia,serif;}
+.dir-journal{background:#1C1914;color:#E8E2D6;--serif:'Cormorant Garamond',Georgia,serif;}
 .dir-journal .kicker{color:var(--bronze);}
 .dir-journal .concept-head h2{font-family:var(--serif);font-weight:500;font-size:78px;line-height:.96;margin:10px 0 0;color:var(--charcoal);}
 .dir-journal .concept-head .lede{font-family:var(--serif);font-size:24px;color:#5c554d;font-style:italic;}
@@ -223,7 +223,7 @@
 .at-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,15,11,.78),rgba(20,15,11,.15) 55%,rgba(20,15,11,.4));}
 .at-hero .inner{position:relative;z-index:2;max-width:62%;}
 .at-hero .eye{font-family:var(--body);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);font-weight:600;}
-.at-hero h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:60px;line-height:1.0;color:#fff;margin:16px 0 0;}
+.at-hero h1{font-family:var(--head);font-weight:700;font-style:normal;font-size:58px;line-height:1.02;color:#fff;margin:16px 0 0;letter-spacing:-.025em;}
 .at-hero p{font-family:var(--body);font-size:14px;color:rgba(255,255,255,.82);line-height:1.6;margin:16px 0 24px;max-width:80%;}
 .at-now{position:absolute;top:120px;right:44px;z-index:2;text-align:right;display:flex;flex-direction:column;gap:14px;}
 .at-now .nh{font-family:var(--body);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.65);font-weight:600;}
@@ -237,7 +237,7 @@
 .at-exhibit::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,15,11,.82),transparent 60%);}
 .at-exhibit .wall{position:relative;z-index:1;}
 .at-exhibit .ex-no{font-family:var(--body);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);font-weight:600;}
-.at-exhibit .ex-t{font-family:var(--serif);font-style:italic;font-size:46px;color:#fff;margin:12px 0 16px;}
+.at-exhibit .ex-t{font-family:var(--head);font-weight:700;font-style:normal;font-size:44px;color:#fff;margin:12px 0 16px;letter-spacing:-.02em;}
 .at-label{display:flex;gap:34px;}
 .at-label .k{font-family:var(--body);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:600;}
 .at-label .v{font-family:var(--body);font-size:13.5px;color:#e8decf;margin-top:5px;}
