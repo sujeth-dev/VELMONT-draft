@@ -18,16 +18,16 @@
   .cover-top{display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(57,56,57,.35);padding-top:22px;}
   .cover-top img{height:24px;}
   .cover-top .meta{font-family:var(--body);font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:#8c8278;font-weight:500;}
-  .cover-mid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;}
-  .cover-mid .markimg{width:360px;height:auto;}
+  .cover-mid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;flex:1;justify-content:center;}
+  .cover-mid .markimg{width:700px;height:auto;transform:translateX(40px);}
   .cover-mid h1{font-family:var(--serif);font-weight:500;font-size:116px;line-height:.92;margin:0;color:var(--charcoal);}
   .cover-mid .lede{font-family:var(--serif);font-style:italic;font-size:25px;color:#6f675e;max-width:720px;line-height:1.5;}
   .cover-foot{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(57,56,57,.35);}
   .cover-foot .ten{padding:22px 20px 0;}
   .cover-foot .ten:not(:first-child){border-left:1px solid rgba(57,56,57,.18);}
-  .cover-foot .num{font-family:var(--serif);font-size:50px;color:var(--bronze);}
+  .cover-foot .num{font-family:var(--head);font-weight:700;font-size:50px;color:var(--bronze);}
   .cover-foot .dn{font-family:var(--head);font-weight:600;font-size:36px;margin-top:7px;color:var(--charcoal);}
-  .cover-foot .dd{font-family:var(--body);font-size:14px;color:#8c8278;margin-top:5px;line-height:1.5;}
+  .cover-foot .ten-feat{border-top:4px solid var(--bronze);padding-top:18px;}
 
   /* ---------- FOUNDATION ---------- */
   .s-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;}
@@ -86,14 +86,14 @@
       <div class="meta">Website Creative Direction · June 2026</div>
     </div>
     <div class="cover-mid">
-      <img class="markimg rise" src="assets/velmont-logo.png" alt="VELMONT">
+      <img class="markimg rise" src="assets/Horizontal-logo.png" alt="VELMONT">
     </div>
     <div class="cover-foot">
-      <div class="ten"><div class="num">01</div><div class="dn">Architectural Luxury</div><div class="dd">Minimal · image-led · timeless</div></div>
-      <div class="ten"><div class="num">02</div><div class="dn">The Studio Journal</div><div class="dd">Editorial · type-led · long-form</div></div>
-      <div class="ten"><div class="num">03</div><div class="dn">The Blueprint</div><div class="dd">Technical · precise · process</div></div>
-      <div class="ten"><div class="num">04</div><div class="dn">Hospitality Luxury</div><div class="dd">Cinematic · warm · arrival</div></div>
-      <div class="ten"><div class="num">05</div><div class="dn">The Atelier</div><div class="dd">Immersive · tactile · gallery</div></div>
+      <div class="ten"><div class="num">01</div><div class="dn">Architectural Luxury</div></div>
+      <div class="ten"><div class="num">02</div><div class="dn">The Studio Journal</div></div>
+      <div class="ten"><div class="num">03</div><div class="dn">The Blueprint</div></div>
+      <div class="ten ten-feat"><div class="num">04</div><div class="dn">Hospitality Luxury</div></div>
+      <div class="ten"><div class="num">05</div><div class="dn">The Atelier</div></div>
     </div>
   </section>
 
@@ -147,7 +147,7 @@
   <section class="dir-arch pad" data-label="01 Architectural — Homepage" data-screen-label="01 Architectural — Homepage">
     <div class="ph-head">
       <div><div class="kicker">Direction 01 · Homepage</div><div class="h2">Architectural Luxury</div></div>
-      <div class="note">Editorial restraint: one image, one line, generous air. A minimal, image-led portfolio.</div>
+      <div class="note">Editorial restraint: one image, one line, generous air. A minimal, image led portfolio.</div>
     </div>
     <div class="web ar-web">
       <div class="ar-nav">
@@ -159,7 +159,7 @@
         <div class="inner">
           <div class="eye">Turnkey Interiors · Est. Precision</div>
           <h1>Spaces composed<br>with architectural intent.</h1>
-          <div class="sub">A studio delivering considered interiors end-to-end, across healthcare, workplace and hospitality.</div>
+          <div class="sub">A studio delivering considered interiors end to end, across healthcare, workplace and hospitality.</div>
           <span class="lnk">View the portfolio →</span>
         </div>
       </div>
@@ -225,7 +225,7 @@
         <div class="jr-mast-r img-stone"><span class="cap">The Anantha, Goa · Hospitality · 2025</span></div>
       </div>
       <div class="jr-contents">
-        <div class="ch"><span>Contents — Recent Features</span><span>Filter ↓</span></div>
+        <div class="ch"><span>Contents · Recent Features</span><span>Filter ↓</span></div>
         <div class="jr-row"><span class="n">01</span><span class="t serif">Meridian Medical Pavilion</span><span class="m">Healthcare · Bengaluru</span><span class="a">→</span></div>
         <div class="jr-row"><span class="n">02</span><span class="t serif">Atlas Global Centre</span><span class="m">MNC Workplace · 48,000 sq ft</span><span class="a">→</span></div>
         <div class="jr-row"><span class="n">03</span><span class="t serif">Lumen Suites</span><span class="m">Hospitality · Goa</span><span class="a">→</span></div>
@@ -236,7 +236,7 @@
   <section class="dir-journal pad" data-label="02 Journal — Feature" data-screen-label="02 Journal — Feature">
     <div class="ph-head">
       <div><div class="kicker">Direction 02 · Project Feature</div><div class="h2">Read like an essay</div></div>
-      <div class="note">Drop-cap intro · two-column body · pull-quote · paired imagery.</div>
+      <div class="note">Drop cap intro · two column body · pull quote · paired imagery.</div>
     </div>
     <div class="web jr-feature">
       <div class="jr-fhero img-shadow">
@@ -245,11 +245,11 @@
       </div>
       <div class="jr-article">
         <div class="jr-art-l">
-          <p class="lead dropcap">The brief asked for "five-star arrival." We answered with restraint — travertine underfoot, walnut at the eye-line, and a single brass datum line that follows you from the door to the lounge.</p>
+          <p class="lead dropcap">The brief asked for "five star arrival." We answered with restraint: travertine underfoot, walnut at the eye-line, and a single brass datum line that follows you from the door to the lounge.</p>
           <div class="body">
             <p>Turnkey delivery meant we controlled every layer, from the slab to the switch plates. That control is the whole argument: a room reads as calm only when nothing in it is accidental.</p>
             <p>Daylight was the first material. We modelled the western glazing through an entire afternoon before a single finish was specified, then chose stones for how they hold warmth as the sun drops.</p>
-            <p>The result is an interior that changes character three times a day — bright and architectural at noon, golden and intimate by seven.</p>
+            <p>The result is an interior that changes character three times a day, bright and architectural at noon, golden and intimate by seven.</p>
           </div>
         </div>
         <div class="jr-art-r">
@@ -270,7 +270,7 @@
   <section class="dir-blue pad" data-label="03 Blueprint — Homepage" data-screen-label="03 Blueprint — Homepage">
     <div class="ph-head">
       <div><div class="kicker">[ DIRECTION 03 · HOMEPAGE ]</div><div class="h2">The Blueprint</div></div>
-      <div class="note">drafting-table hero · coordinate overlay · modular capability index</div>
+      <div class="note">drafting table hero · coordinate overlay · modular capability index</div>
     </div>
     <div class="web bl-web">
       <div class="bl-nav">
@@ -282,8 +282,8 @@
         <div class="bl-hero-l">
           <span class="bl-coord" style="top:18px;left:46px;">[ 00 / HOME ]</span>
           <span class="bl-coord" style="bottom:18px;left:46px;">N 12°58′ · E 77°35′</span>
-          <h1>Interiors,<br>engineered <span class="ac">end&#8209;to&#8209;end.</span></h1>
-          <p>One accountable team from slab to switch-plate. We design the experience and deliver the build — turnkey, on programme, to spec.</p>
+          <h1>Interiors,<br>engineered <span class="ac">end to end.</span></h1>
+          <p>One accountable team from slab to switch plate. We design the experience and deliver the build, turnkey, on programme, to spec.</p>
           <div class="row"><span class="bl-btn solid">Request a proposal →</span><span class="bl-btn ghost">View capabilities</span></div>
         </div>
         <div class="bl-hero-r img-glass">
@@ -298,7 +298,7 @@
         <div class="cell"><div class="ci">03</div><div class="cn">Hospitality</div></div>
         <div class="cell"><div class="ci">04</div><div class="cn">Hospitals</div></div>
         <div class="cell"><div class="ci">05</div><div class="cn">Commercial</div></div>
-        <div class="cell"><div class="ci">06</div><div class="cn">MNC Fit-out</div></div>
+        <div class="cell"><div class="ci">06</div><div class="cn">MNC Fit out</div></div>
       </div>
     </div>
   </section>
@@ -373,7 +373,7 @@
         <div class="inner">
           <div class="eye">Hotels · Resorts · Restaurants</div>
           <h1>Interiors that feel<br>like an arrival.</h1>
-          <p>We compose hospitality space for atmosphere — warm light, materials that age beautifully, and a sense of occasion from the first step inside.</p>
+          <p>We compose hospitality space for atmosphere: warm light, materials that age beautifully, and a sense of occasion from the first step inside.</p>
           <span class="cta">Plan your space →</span>
         </div>
       </div>
@@ -402,7 +402,7 @@
       <div class="ho-exp-r">
         <div>
           <div class="sec">The Experience</div>
-          <div class="lead">A lobby that warms as the day cools — brass catching the last light, walnut deepening into evening.</div>
+          <div class="lead">A lobby that warms as the day cools, brass catching the last light, walnut deepening into evening.</div>
           <div class="body">Every threshold was choreographed: the temperature of the light, the sound underfoot, the first material your hand meets. Hospitality is felt before it is seen.</div>
         </div>
         <div class="ho-detail">
@@ -426,7 +426,7 @@
   <section class="dir-atelier pad" data-label="05 Atelier — Homepage" data-screen-label="05 Atelier — Homepage">
     <div class="ph-head">
       <div><div class="kicker">Direction 05 · Homepage</div><div class="h2">The Atelier</div></div>
-      <div class="note">cinematic full-bleed arrival · floating nav · "now showing" index</div>
+      <div class="note">cinematic full bleed arrival · floating nav · "now showing" index</div>
     </div>
     <div class="web at-web" style="position:relative;">
       <div class="at-nav">
@@ -443,7 +443,7 @@
         <div class="inner">
           <div class="eye">Turnkey Interiors · Est. Precision</div>
           <h1>Interiors that feel<br>like an arrival.</h1>
-          <p>We compose space for how it is felt — light pooled just so, materials chosen to age beautifully, every room an experience before it is a plan.</p>
+          <p>We compose space for how it is felt: light pooled just so, materials chosen to age beautifully, every room an experience before it is a plan.</p>
           <span class="at-cta">Enter the gallery →</span>
         </div>
       </div>
@@ -469,7 +469,7 @@
         </div>
       </div>
       <div class="at-list">
-        <div class="ix-h">The Collection — 24 works</div>
+        <div class="ix-h">The Collection · 24 works</div>
         <div class="ix"><span class="n">02</span><span class="nm">Atlas Global Centre<small>Workplace · Bengaluru</small></span><span class="a">→</span></div>
         <div class="ix"><span class="n">03</span><span class="nm">Lumen Suites<small>Hospitality · Goa</small></span><span class="a">→</span></div>
         <div class="ix"><span class="n">04</span><span class="nm">Meridian Pavilion<small>Healthcare · Bengaluru</small></span><span class="a">→</span></div>
@@ -487,7 +487,7 @@
   <section class="dir-arch pad" data-label="Evaluation" data-screen-label="Evaluation">
     <div class="s-head">
       <div><div class="kicker" style="color:var(--bronze)">Decision Matrix</div><h2>Which world to build</h2></div>
-      <div style="font-family:var(--body);font-size:12.5px;color:#8c8278;max-width:380px;text-align:right;line-height:1.6;">Five distinct ideas, not five skins — so the choice is strategic. Pairs with overlap (01/02 light · 04/05 warm) ask you to pick one of each.</div>
+      <div style="font-family:var(--body);font-size:12.5px;color:#8c8278;max-width:380px;text-align:right;line-height:1.6;">Five distinct ideas, not five skins, so the choice is strategic. Pairs with overlap (01/02 light · 04/05 warm) ask you to pick one of each.</div>
     </div>
     <div class="ev2-grid ev5" style="margin-top:30px;">
       <div class="c crit" style="background:#393839;color:#F3EEE7;">Evaluation criteria</div>
@@ -534,7 +534,7 @@
     </div>
     <div class="rec" style="margin-top:24px;">
       <div><div class="rl">Our Recommendation</div><div class="rt serif">Lead with 02 · The Studio Journal</div></div>
-      <div class="rd">It carries the editorial confidence you admired, is among the most ownable, and reads well before final photography. Borrow 03 · Blueprint's spec-sheet rigour for corporate / MNC pages and the warmth of 04/05 for hospitality features — one voice, several registers.</div>
+      <div class="rd">It carries the editorial confidence you admired, is among the most ownable, and reads well before final photography. Borrow 03 · Blueprint's spec-sheet rigour for corporate / MNC pages and the warmth of 04/05 for hospitality features, one voice, several registers.</div>
     </div>
   </section>
 
