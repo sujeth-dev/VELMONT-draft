@@ -2,8 +2,688 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=VELMONT%20Creative%20Direction.html">
-<title>VELMONT — Creative Direction</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VELMONT — Defining Environments.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- The Seasons local font faces from shared project folder -->
+<style>
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-lt.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-ltit.otf') format('opentype');font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-reg.otf') format('opentype');font-weight:400 500;font-style:normal;font-display:swap;}
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-it.otf') format('opentype');font-weight:400 500;font-style:italic;font-display:swap;}
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-bd.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap;}
+
+/* ── Design tokens — Direction 01 v2 (new brand kit) ── */
+:root{
+  /* New brand palette */
+  --vblack:   #1A1A1A;
+  --terracotta:#FF4015;   /* accent only */
+  --slate:    #68778D;
+  --concrete: #D9DCE0;
+  --mineral:  #BBBCC3;
+  --steel:    #8C92BA;
+  --sand:     #D9CAB0;
+  /* Background */
+  --paper:    #F4F0EB;
+  /* Typography */
+  --display:  'The Seasons','Cormorant Garamond',Georgia,serif;
+  --serif:    'Cormorant Garamond',Georgia,serif;
+  --head:     'Manrope',system-ui,sans-serif;
+  --body:     'Inter',system-ui,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--paper);
+  color:var(--vblack);
+  font-family:var(--body);
+  -webkit-font-smoothing:antialiased;
+  min-width:1200px;
+}
+
+/* ════════════════════════════════════════════
+   NAV
+════════════════════════════════════════════ */
+.site-nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 80px;
+  height:94px;
+  background:var(--paper);
+  border-bottom:1px solid var(--mineral);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.nav-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0;
+}
+.nav-logo{
+  height:82px;
+  width:auto;
+  display:block;
+}
+.nav-tagline{
+  font-family:var(--body);
+  font-size:9.5px;
+  font-weight:500;
+  letter-spacing:0.30em;
+  text-transform:uppercase;
+  color:var(--slate);
+  margin-top:-20px;
+}
+.nav-links{
+  display:flex;
+  gap:44px;
+  font-family:var(--body);
+  font-weight:500;
+  font-size:13.5px;
+  letter-spacing:0.04em;
+  color:#5a5550;
+}
+.nav-links a{text-decoration:none;color:inherit;}
+.nav-links a.active{
+  color:var(--vblack);
+  padding-bottom:3px;
+  border-bottom:2px solid var(--terracotta);
+}
+.nav-cta{
+  font-family:var(--body);
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--vblack);
+  text-decoration:none;
+  border:1px solid var(--terracotta);
+  padding:11px 28px;
+  border-radius:2px;
+  white-space:nowrap;
+}
+
+/* ════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════ */
+.hero{
+  position:relative;
+  height:700px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:70px 80px;
+  overflow:hidden;
+}
+/* layered gradient — architectural dark stone mood */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.06), rgba(0,0,0,.30)),
+    radial-gradient(120% 120% at 72% 10%, #6d6862 0%, #46433f 52%, #2b2927 100%);
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(8,8,8,.65) 0%,rgba(8,8,8,.14) 55%,transparent 100%);
+}
+.hero-inner{
+  position:relative;
+  z-index:1;
+  max-width:900px;
+}
+.hero-eyebrow{
+  font-family:var(--body);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:0.40em;
+  text-transform:uppercase;
+  color:rgba(209,200,188,0.82);
+  margin-bottom:24px;
+}
+.hero h1{
+  font-family:var(--head);
+  font-weight:600;
+  font-size:88px;
+  line-height:0.98;
+  letter-spacing:-0.03em;
+  color:#fff;
+  margin-bottom:30px;
+}
+.hero-sub{
+  font-family:var(--body);
+  font-weight:400;
+  font-size:16px;
+  line-height:1.72;
+  color:rgba(255,255,255,0.66);
+  max-width:560px;
+  margin-bottom:44px;
+}
+.hero-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  font-family:var(--body);
+  font-size:14px;
+  font-weight:500;
+  letter-spacing:0.04em;
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,0.38);
+  padding-bottom:4px;
+}
+.hero-cta .arr{color:var(--terracotta);font-size:17px;}
+.hero-meta{
+  position:absolute;
+  right:80px;
+  bottom:70px;
+  z-index:1;
+  text-align:right;
+}
+.hero-meta span{
+  display:block;
+  font-family:var(--body);
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:0.26em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.36);
+  line-height:1.8;
+}
+
+/* ════════════════════════════════════════════
+   SELECTED WORK STRIP
+════════════════════════════════════════════ */
+.work-strip{
+  display:grid;
+  grid-template-columns:240px repeat(3,1fr);
+  border-bottom:1px solid var(--mineral);
+}
+.ws-label{
+  padding:34px 0 34px 80px;
+  border-right:1px solid var(--mineral);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.ws-label .ws-kicker{
+  font-family:var(--body);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color:var(--slate);
+}
+.ws-label .ws-count{
+  font-family:var(--display);
+  font-size:52px;
+  font-weight:400;
+  color:var(--vblack);
+  line-height:1;
+  letter-spacing:0.06em;
+}
+.ws-label .ws-note{
+  font-family:var(--body);
+  font-size:10px;
+  color:var(--mineral);
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.work-tile{
+  padding:28px 40px;
+  border-right:1px solid var(--mineral);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:12px;
+  cursor:default;
+}
+.work-tile:last-child{border-right:none;}
+.wt-ind{
+  font-family:var(--body);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.30em;
+  text-transform:uppercase;
+  color:var(--slate);
+}
+.wt-name{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:28px;
+  color:var(--vblack);
+  line-height:1.18;
+  flex:1;
+  display:flex;
+  align-items:flex-end;
+}
+.wt-foot{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:14px;
+  border-top:1px solid var(--mineral);
+}
+.wt-year{
+  font-family:var(--body);
+  font-size:11px;
+  font-weight:500;
+  color:var(--mineral);
+  letter-spacing:0.12em;
+}
+.wt-arr{
+  font-size:18px;
+  color:var(--terracotta);
+  font-family:var(--body);
+  font-weight:400;
+}
+
+/* ════════════════════════════════════════════
+   STUDIO INTRO — 2-column
+════════════════════════════════════════════ */
+.studio-intro{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:460px;
+}
+.studio-text{
+  padding:76px 80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:30px;
+  border-right:1px solid var(--mineral);
+}
+.studio-kicker{
+  font-family:var(--body);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.34em;
+  text-transform:uppercase;
+  color:var(--slate);
+}
+.studio-text h2{
+  font-family:var(--head);
+  font-weight:600;
+  font-size:48px;
+  line-height:1.04;
+  letter-spacing:-0.02em;
+  color:var(--vblack);
+  max-width:500px;
+}
+.studio-text p{
+  font-family:var(--body);
+  font-weight:400;
+  font-size:15px;
+  line-height:1.78;
+  color:#5a5550;
+  max-width:460px;
+}
+.studio-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--body);
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:0.08em;
+  color:var(--vblack);
+  text-decoration:none;
+  border-bottom:1px solid var(--vblack);
+  padding-bottom:3px;
+  width:fit-content;
+}
+.studio-link .arr{color:var(--terracotta);}
+.studio-image{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(120deg,rgba(255,255,255,.28),rgba(141,116,90,.20)),
+    radial-gradient(120% 90% at 32% 14%,#d8cdbd 0%,#c4b6a4 52%,#a89a87 100%);
+}
+.studio-image-cap{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  padding:22px 36px;
+  font-family:var(--body);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.68);
+  background:linear-gradient(0deg,rgba(20,18,17,.55),transparent);
+}
+
+/* ════════════════════════════════════════════
+   DISCIPLINES STRIP
+════════════════════════════════════════════ */
+.disciplines{
+  display:grid;
+  grid-template-columns:240px repeat(4,1fr);
+  border-top:1px solid var(--mineral);
+  border-bottom:1px solid var(--mineral);
+}
+.disc-label-cell{
+  padding:44px 0 44px 80px;
+  display:flex;
+  align-items:center;
+  border-right:1px solid var(--mineral);
+}
+.disc-label-cell span{
+  font-family:var(--body);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color:var(--slate);
+}
+.disc-item{
+  padding:44px 40px;
+  border-right:1px solid var(--mineral);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.disc-item:last-child{border-right:none;}
+.disc-name{
+  font-family:var(--head);
+  font-weight:500;
+  font-size:15px;
+  letter-spacing:0.01em;
+  color:var(--vblack);
+}
+.disc-note{
+  font-family:var(--body);
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:0.20em;
+  text-transform:uppercase;
+  color:var(--slate);
+}
+
+/* ════════════════════════════════════════════
+   PROCESS TEASER
+════════════════════════════════════════════ */
+.process-strip{
+  padding:80px 80px;
+  display:flex;
+  align-items:flex-start;
+  gap:100px;
+  background:var(--vblack);
+}
+.process-head{
+  flex:0 0 340px;
+}
+.process-head .pk{
+  font-family:var(--body);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.34em;
+  text-transform:uppercase;
+  color:var(--slate);
+  margin-bottom:18px;
+}
+.process-head h3{
+  font-family:var(--head);
+  font-weight:600;
+  font-size:44px;
+  line-height:1.04;
+  letter-spacing:-0.02em;
+  color:#fff;
+  margin-bottom:24px;
+}
+.process-head p{
+  font-family:var(--body);
+  font-size:14px;
+  line-height:1.72;
+  color:rgba(255,255,255,0.50);
+  max-width:300px;
+}
+.process-steps{
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+.process-step{
+  padding:0 36px;
+  border-left:1px solid rgba(187,188,195,0.18);
+}
+.ps-num{
+  font-family:var(--display);
+  font-size:42px;
+  font-weight:400;
+  color:rgba(255,255,255,0.14);
+  letter-spacing:0.06em;
+  line-height:1;
+  margin-bottom:16px;
+}
+.ps-title{
+  font-family:var(--head);
+  font-weight:600;
+  font-size:16px;
+  letter-spacing:-0.01em;
+  color:#fff;
+  margin-bottom:10px;
+}
+.ps-desc{
+  font-family:var(--body);
+  font-size:12.5px;
+  line-height:1.7;
+  color:rgba(255,255,255,0.42);
+}
+
+/* ════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════ */
+.site-footer{
+  padding:44px 80px;
+  background:var(--vblack);
+  border-top:1px solid rgba(187,188,195,0.14);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.footer-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0;
+}
+.footer-logo{height:82px;width:auto;display:block;}
+.footer-tagline-f{
+  font-family:var(--body);
+  font-size:9.5px;
+  font-weight:500;
+  letter-spacing:0.30em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.45);
+  margin-top:-20px;
+}
+.footer-links{
+  display:flex;
+  gap:38px;
+  font-family:var(--body);
+  font-size:12px;
+  letter-spacing:0.10em;
+  color:rgba(255,255,255,0.38);
+}
+.footer-copy{
+  font-family:var(--body);
+  font-size:11px;
+  color:rgba(255,255,255,0.22);
+  letter-spacing:0.04em;
+}
+</style>
 </head>
-<body></body>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<nav class="site-nav">
+  <div class="nav-brand">
+    <img class="nav-logo" src="assets/velmont-main.png" alt="VELMONT">
+    <span class="nav-tagline">Defining Environments.</span>
+  </div>
+  <div class="nav-links">
+    <a href="work" class="active">Work</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+  <a href="#" class="nav-cta">Enquire</a>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Defining Environments.</div>
+    <h1>Spaces composed<br>with architectural<br>intent.</h1>
+    <p class="hero-sub">A turnkey interiors studio delivering considered, end-to-end environments across healthcare, workplace, and hospitality — from initial brief to the final switch plate.</p>
+    <a href="work" class="hero-cta">View the Portfolio <span class="arr">→</span></a>
+  </div>
+  <div class="hero-meta">
+    <span>Bengaluru, India</span>
+    <span>Est. 2018</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SELECTED WORK STRIP
+══════════════════════════════════════════ -->
+<div class="work-strip">
+  <div class="ws-label">
+    <div class="ws-kicker">Selected Work</div>
+    <div class="ws-count">24</div>
+    <div class="ws-note">Projects</div>
+  </div>
+  <div class="work-tile">
+    <div class="wt-ind">Hospitality</div>
+    <div class="wt-name">The Anantha</div>
+    <div class="wt-foot">
+      <span class="wt-year">Goa · 2025</span>
+      <span class="wt-arr">→</span>
+    </div>
+  </div>
+  <div class="work-tile">
+    <div class="wt-ind">Workplace</div>
+    <div class="wt-name">Atlas Global Centre</div>
+    <div class="wt-foot">
+      <span class="wt-year">Bengaluru · 2025</span>
+      <span class="wt-arr">→</span>
+    </div>
+  </div>
+  <div class="work-tile">
+    <div class="wt-ind">Healthcare</div>
+    <div class="wt-name">Meridian Medical Pavilion</div>
+    <div class="wt-foot">
+      <span class="wt-year">Bengaluru · 2024</span>
+      <span class="wt-arr">→</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     STUDIO INTRO
+══════════════════════════════════════════ -->
+<section class="studio-intro">
+  <div class="studio-text">
+    <div class="studio-kicker">The Studio</div>
+    <h2>One team.<br>Every layer.<br>Delivered.</h2>
+    <p>We design environments end to end — architecture, interiors, furniture, and build, held together by a single accountable studio. No handoffs. No gaps. One vision carried from the first sketch to the final slab.</p>
+    <a href="#" class="studio-link">Our Process <span class="arr">→</span></a>
+  </div>
+  <div class="studio-image">
+    <div class="studio-image-cap">The Anantha · Hospitality · Goa, 2025</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     DISCIPLINES STRIP
+══════════════════════════════════════════ -->
+<section class="disciplines">
+  <div class="disc-label-cell"><span>Disciplines</span></div>
+  <div class="disc-item">
+    <div class="disc-name">Workplace</div>
+    <div class="disc-note">48,000 ft² avg.</div>
+  </div>
+  <div class="disc-item">
+    <div class="disc-name">Healthcare</div>
+    <div class="disc-note">Clinical &amp; Wellness</div>
+  </div>
+  <div class="disc-item">
+    <div class="disc-name">Hospitality</div>
+    <div class="disc-note">Hotels &amp; Resorts</div>
+  </div>
+  <div class="disc-item">
+    <div class="disc-name">Commercial</div>
+    <div class="disc-note">MNC Fit-out</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROCESS TEASER — dark section
+══════════════════════════════════════════ -->
+<section class="process-strip">
+  <div class="process-head">
+    <div class="pk">How We Work</div>
+    <h3>Turnkey, from brief to handover.</h3>
+    <p>One accountable studio managing every discipline — so the environment you receive matches the environment you imagined.</p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="ps-num">01</div>
+      <div class="ps-title">Brief</div>
+      <div class="ps-desc">Understanding the programme, budget, and the feeling the space must create.</div>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">02</div>
+      <div class="ps-title">Design</div>
+      <div class="ps-desc">Architectural drawings, material boards, and spatial narratives — resolved together.</div>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">03</div>
+      <div class="ps-title">Build</div>
+      <div class="ps-desc">Studio-managed construction. Every supplier, every finish, every timeline held to one standard.</div>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">04</div>
+      <div class="ps-title">Handover</div>
+      <div class="ps-desc">A complete environment, delivered on programme, ready to live in from day one.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-brand">
+    <img class="footer-logo" src="assets/velmont-white.png" alt="VELMONT">
+    <span class="footer-tagline-f">Defining Environments.</span>
+  </div>
+  <div class="footer-links">
+    <span>Work</span>
+    <span>Services</span>
+    <span>About</span>
+    <span>Contact</span>
+  </div>
+  <span class="footer-copy">© 2026 Velmont Design Studio. All rights reserved.</span>
+</footer>
+
+</body>
 </html>

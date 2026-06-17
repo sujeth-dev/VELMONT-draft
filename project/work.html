@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian Medical Pavilion — VELMONT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-lt.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-ltit.otf') format('opentype');font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-reg.otf') format('opentype');font-weight:400 500;font-style:normal;font-display:swap;}
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-it.otf') format('opentype');font-weight:400 500;font-style:italic;font-display:swap;}
+@font-face{font-family:'The Seasons';src:url('fonts/theseasons-bd.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap;}
+
+/* ── Design tokens — Direction 01 v2 (new brand kit) ── */
+:root{
+  --vblack:    #1A1A1A;
+  --terracotta:#FF4015;   /* accent only */
+  --slate:     #68778D;
+  --concrete:  #D9DCE0;
+  --mineral:   #BBBCC3;
+  --steel:     #8C92BA;
+  --sand:      #D9CAB0;
+  --paper:     #F4F0EB;
+  --display:   'The Seasons','Cormorant Garamond',Georgia,serif;
+  --serif:     'Cormorant Garamond',Georgia,serif;
+  --head:      'Manrope',system-ui,sans-serif;
+  --body:      'Inter',system-ui,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:var(--paper);
+  color:var(--vblack);
+  font-family:var(--body);
+  -webkit-font-smoothing:antialiased;
+  min-width:1200px;
+}
+
+/* ════════════════════════════════════════════
+   NAV (identical to homepage)
+════════════════════════════════════════════ */
+.site-nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 80px;
+  height:94px;
+  background:var(--paper);
+  border-bottom:1px solid var(--mineral);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.nav-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0;
+}
+.nav-logo{height:82px;width:auto;display:block;}
+.nav-tagline{
+  font-family:var(--body);
+  font-size:9.5px;font-weight:500;
+  letter-spacing:0.30em;text-transform:uppercase;
+  color:var(--slate);
+  margin-top:-20px;
+}
+.nav-links{
+  display:flex;
+  gap:44px;
+  font-family:var(--body);
+  font-weight:500;font-size:13.5px;letter-spacing:0.04em;color:#5a5550;
+}
+.nav-links a{text-decoration:none;color:inherit;}
+.nav-links a.active{
+  color:var(--vblack);
+  padding-bottom:3px;
+  border-bottom:2px solid var(--terracotta);
+}
+.nav-cta{
+  font-family:var(--body);
+  font-size:12px;font-weight:500;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--vblack);text-decoration:none;
+  border:1px solid var(--terracotta);
+  padding:11px 28px;border-radius:2px;white-space:nowrap;
+}
+
+/* ════════════════════════════════════════════
+   PROJECT BREADCRUMB
+════════════════════════════════════════════ */
+.breadcrumb{
+  padding:18px 80px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border-bottom:1px solid var(--mineral);
+}
+.breadcrumb a{
+  font-family:var(--body);
+  font-size:11.5px;font-weight:500;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--slate);text-decoration:none;
+}
+.breadcrumb .sep{
+  font-family:var(--body);
+  font-size:11px;color:var(--mineral);
+}
+.breadcrumb .current{
+  font-family:var(--body);
+  font-size:11.5px;font-weight:500;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--vblack);
+}
+
+/* ════════════════════════════════════════════
+   PROJECT HERO
+════════════════════════════════════════════ */
+.proj-hero{
+  position:relative;
+  height:520px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:60px 80px;
+  overflow:hidden;
+}
+.proj-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  /* img-stone mood — honed travertine, warm light */
+  background:
+    linear-gradient(118deg,rgba(255,255,255,.22),rgba(57,56,57,.16)),
+    radial-gradient(130% 90% at 22% 8%,#ece5da 0%,#cfc6b7 52%,#a89a87 100%);
+}
+.proj-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,rgba(10,10,10,.58) 0%,rgba(10,10,10,.10) 55%,transparent 100%);
+}
+.proj-hero-inner{
+  position:relative;
+  z-index:1;
+}
+.proj-eyebrow{
+  font-family:var(--body);
+  font-size:11px;font-weight:600;
+  letter-spacing:0.38em;text-transform:uppercase;
+  color:rgba(209,200,188,0.78);
+  margin-bottom:18px;
+}
+.proj-hero h1{
+  font-family:var(--head);
+  font-weight:700;font-size:68px;
+  line-height:1.0;letter-spacing:-0.025em;
+  color:#fff;
+}
+
+/* ════════════════════════════════════════════
+   SPEC BAR
+════════════════════════════════════════════ */
+.spec-bar{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:var(--concrete);
+  border-top:2px solid var(--terracotta);
+  border-bottom:1px solid var(--mineral);
+}
+.spec-item{
+  padding:26px 40px;
+  border-right:1px solid var(--mineral);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.spec-item:first-child{padding-left:80px;}
+.spec-item:last-child{border-right:none;}
+.spec-label{
+  font-family:var(--body);
+  font-size:10px;font-weight:600;
+  letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--slate);
+}
+.spec-value{
+  font-family:var(--head);
+  font-weight:500;font-size:18px;
+  letter-spacing:-0.01em;
+  color:var(--vblack);
+}
+
+/* ════════════════════════════════════════════
+   PROJECT BODY
+════════════════════════════════════════════ */
+.proj-body{
+  padding:72px 80px;
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:80px;
+  border-bottom:1px solid var(--mineral);
+}
+.proj-lead{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:28px;
+  line-height:1.50;
+  color:var(--vblack);
+  letter-spacing:0.004em;
+}
+.proj-lead strong{
+  font-style:normal;
+  font-weight:600;
+  color:var(--slate);
+}
+.proj-text-col{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  justify-content:flex-start;
+  padding-top:6px;
+}
+.proj-text-col p{
+  font-family:var(--body);
+  font-size:14.5px;
+  line-height:1.80;
+  color:#5a5550;
+}
+.proj-materials{
+  margin-top:32px;
+  padding-top:28px;
+  border-top:1px solid var(--mineral);
+}
+.proj-mat-label{
+  font-family:var(--body);
+  font-size:10px;font-weight:600;
+  letter-spacing:0.30em;text-transform:uppercase;
+  color:var(--slate);
+  margin-bottom:14px;
+}
+.proj-mat-list{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.proj-mat-tag{
+  font-family:var(--body);
+  font-size:11.5px;font-weight:500;
+  letter-spacing:0.12em;
+  color:#5a5550;
+  border:1px solid var(--mineral);
+  padding:7px 16px;
+  border-radius:999px;
+}
+
+/* ════════════════════════════════════════════
+   IMAGE GRID
+════════════════════════════════════════════ */
+.proj-grid{
+  display:grid;
+  grid-template-columns:1.62fr 1fr;
+  grid-template-rows:1fr 1fr;
+  height:560px;
+  gap:3px;
+  background:var(--mineral);
+}
+.pg-main{
+  grid-row:1 / 3;
+  position:relative;
+  overflow:hidden;
+  /* img-limestone — warm honed stone */
+  background:
+    linear-gradient(120deg,rgba(255,255,255,.30),rgba(141,116,90,.18)),
+    radial-gradient(120% 90% at 30% 12%,#d8cdbd 0%,#bfb0a0 52%,#9c8c79 100%);
+}
+.pg-top-right{
+  position:relative;
+  overflow:hidden;
+  /* img-stone */
+  background:
+    linear-gradient(118deg,rgba(255,255,255,.22),rgba(57,56,57,.16)),
+    radial-gradient(130% 90% at 22% 8%,#ece5da 0%,#cfc6b7 52%,#a89a87 100%);
+}
+.pg-bottom-right{
+  position:relative;
+  overflow:hidden;
+  /* img-warm — golden dusk */
+  background:
+    linear-gradient(120deg,rgba(255,236,214,.30),rgba(40,28,20,.34)),
+    radial-gradient(120% 95% at 72% 10%,#b58e64 0%,#8d745a 42%,#4a3a2c 100%);
+}
+.img-caption{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  padding:16px 22px;
+  font-family:var(--body);
+  font-size:10px;font-weight:600;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:rgba(255,255,255,0.70);
+  background:linear-gradient(0deg,rgba(15,13,12,.55),transparent);
+}
+.img-caption.light{
+  color:rgba(30,25,20,0.55);
+  background:none;
+  font-size:9.5px;
+}
+
+/* ════════════════════════════════════════════
+   PROJECT NAV — next/prev
+════════════════════════════════════════════ */
+.proj-nav{
+  padding:0 80px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--mineral);
+}
+.proj-nav-item{
+  padding:40px 0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  cursor:default;
+}
+.proj-nav-item:last-child{
+  padding-left:60px;
+  border-left:1px solid var(--mineral);
+  align-items:flex-end;
+}
+.pni-dir{
+  font-family:var(--body);
+  font-size:10px;font-weight:600;
+  letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--slate);
+}
+.pni-name{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:28px;
+  color:var(--vblack);
+}
+.pni-ind{
+  font-family:var(--body);
+  font-size:11px;
+  letter-spacing:0.14em;
+  color:var(--mineral);
+  text-transform:uppercase;
+  font-weight:500;
+}
+.pni-arr{
+  font-size:20px;
+  color:var(--terracotta);
+  font-family:var(--body);
+}
+.proj-nav-item:first-child .pni-arr{margin-top:4px;}
+
+/* ════════════════════════════════════════════
+   FOOTER (identical to homepage)
+════════════════════════════════════════════ */
+.site-footer{
+  padding:44px 80px;
+  background:var(--vblack);
+  border-top:1px solid rgba(187,188,195,0.14);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.footer-brand{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0;
+}
+.footer-logo{height:82px;width:auto;display:block;}
+.footer-tagline-f{
+  font-family:var(--body);
+  font-size:9.5px;font-weight:500;
+  letter-spacing:0.30em;text-transform:uppercase;
+  color:rgba(255,255,255,0.45);
+  margin-top:-20px;
+}
+.footer-links{
+  display:flex;gap:38px;
+  font-family:var(--body);font-size:12px;
+  letter-spacing:0.10em;color:rgba(255,255,255,0.38);
+}
+.footer-copy{
+  font-family:var(--body);font-size:11px;
+  color:rgba(255,255,255,0.22);letter-spacing:0.04em;
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<nav class="site-nav">
+  <div class="nav-brand">
+    <img class="nav-logo" src="assets/velmont-main.png" alt="VELMONT">
+    <span class="nav-tagline">Defining Environments.</span>
+  </div>
+  <div class="nav-links">
+    <a href="/" class="active">Work</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+  <a href="#" class="nav-cta">Enquire</a>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     BREADCRUMB
+══════════════════════════════════════════ -->
+<div class="breadcrumb">
+  <a href="/">Work</a>
+  <span class="sep">/</span>
+  <a href="#">Healthcare</a>
+  <span class="sep">/</span>
+  <span class="current">Meridian Medical Pavilion</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PROJECT HERO
+══════════════════════════════════════════ -->
+<section class="proj-hero">
+  <div class="proj-hero-inner">
+    <div class="proj-eyebrow">Healthcare · Bengaluru</div>
+    <h1>Meridian Medical<br>Pavilion</h1>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SPEC BAR
+══════════════════════════════════════════ -->
+<div class="spec-bar">
+  <div class="spec-item">
+    <div class="spec-label">Industry</div>
+    <div class="spec-value">Healthcare</div>
+  </div>
+  <div class="spec-item">
+    <div class="spec-label">Area</div>
+    <div class="spec-value">22,000 ft²</div>
+  </div>
+  <div class="spec-item">
+    <div class="spec-label">Year</div>
+    <div class="spec-value">2024</div>
+  </div>
+  <div class="spec-item">
+    <div class="spec-label">Scope</div>
+    <div class="spec-value">Turnkey</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PROJECT BODY
+══════════════════════════════════════════ -->
+<section class="proj-body">
+  <div class="proj-lead">
+    Calm by design: daylight, honed stone, and warm timber soften a clinical brief into something <strong>restorative.</strong> A single material palette runs from the arrival atrium to the consulting suite — so the building reads as one continuous, considered space.
+  </div>
+  <div class="proj-text-col">
+    <p>The brief asked for clinical efficiency. We answered with spatial calm: a sequence of rooms where the light changes quality as you move deeper — bright and architectural at the entrance, warmer and more intimate at the consulting level.</p>
+    <p>Daylight was the first material specified. Every stone and timber finish was then chosen for how it holds warmth across the day, so the environment shifts character without ever feeling designed.</p>
+    <p>Turnkey delivery meant we controlled every layer — from structural slab to bespoke joinery details. That continuity of accountability is the whole argument: a room reads as calm only when nothing in it is accidental.</p>
+    <div class="proj-materials">
+      <div class="proj-mat-label">Materials</div>
+      <div class="proj-mat-list">
+        <span class="proj-mat-tag">Travertine · Honed</span>
+        <span class="proj-mat-tag">Walnut Veneer</span>
+        <span class="proj-mat-tag">Polished Concrete</span>
+        <span class="proj-mat-tag">Aged Bronze</span>
+        <span class="proj-mat-tag">Acoustic Linen</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     IMAGE GRID
+══════════════════════════════════════════ -->
+<div class="proj-grid">
+  <div class="pg-main">
+    <div class="img-caption light">Arrival atrium · Level 00</div>
+  </div>
+  <div class="pg-top-right">
+    <div class="img-caption">Consulting suite · Level 03</div>
+  </div>
+  <div class="pg-bottom-right">
+    <div class="img-caption">Stone datum detail</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PROJECT NAV
+══════════════════════════════════════════ -->
+<div class="proj-nav">
+  <div class="proj-nav-item">
+    <div class="pni-dir">← Previous Project</div>
+    <div class="pni-name">The Anantha</div>
+    <div class="pni-ind">Hospitality · Goa</div>
+  </div>
+  <div class="proj-nav-item">
+    <div class="pni-dir">Next Project →</div>
+    <div class="pni-name">Atlas Global Centre</div>
+    <div class="pni-ind">Workplace · Bengaluru</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-brand">
+    <img class="footer-logo" src="assets/velmont-white.png" alt="VELMONT">
+    <span class="footer-tagline-f">Defining Environments.</span>
+  </div>
+  <div class="footer-links">
+    <span>Work</span>
+    <span>Services</span>
+    <span>About</span>
+    <span>Contact</span>
+  </div>
+  <span class="footer-copy">© 2026 Velmont Design Studio. All rights reserved.</span>
+</footer>
+
+</body>
+</html>
